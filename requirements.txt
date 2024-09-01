@@ -1,2 +1,3 @@
 streamlit
 transformers==4.43.1
+torch
