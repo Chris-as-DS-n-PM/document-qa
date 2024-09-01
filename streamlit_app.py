@@ -1,5 +1,6 @@
 import streamlit as st
 from transformers import pipeline
+import torch
 
 # Show title and description.
 st.title("📄 Document question answering")
