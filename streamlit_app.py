@@ -30,13 +30,11 @@ question = st.text_area(
 if uploaded_file and question:
     # Process the uploaded file and question.
     context = uploaded_file.read().decode()
+    # Pass the inputs to the pipeline
+    outputs = qa_model(question=question, context=context)
 
+    # Access and print the answer
+    stream = outputs['answer']
 
-# Pass the inputs to the pipeline
-outputs = qa_model(question=question, context=context)
-
-# Access and print the answer
-stream = outputs['answer']
-
-# Stream the response to the app using `st.write_stream`.
-st.write_stream(stream)
+    # Stream the response to the app using `st.write_stream`.
+    st.write(stream)
