@@ -1,5 +1,4 @@
 import streamlit as st
-from openai import OpenAI
 from transformers import pipeline
 
 # Show title and description.

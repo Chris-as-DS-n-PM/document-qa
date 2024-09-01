@@ -1,4 +1,2 @@
 streamlit
-openai
-transformers
-pipeline
+transformers==4.43.1
