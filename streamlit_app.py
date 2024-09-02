@@ -8,11 +8,7 @@ st.write(
     "Upload a document below and ask a question about it"
 )
 
-qa_model = pipeline("question-answering")
-
-# Ask user for their OpenAI API key via `st.text_input`.
-# Alternatively, you can store the API key in `./.streamlit/secrets.toml` and access it
-# via `st.secrets`, see https://docs.streamlit.io/develop/concepts/connections/secrets-management
+qa_model = pipeline(task="question-answering")
 
 
 # Let the user upload a file via `st.file_uploader`.
